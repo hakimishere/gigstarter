@@ -1,0 +1,87 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    margin: 0;
+}
+
+
+header {
+	margin-top: 1%;
+	padding-bottom: 1%;
+	border-bottom: 1px solid grey;
+}
+
+// a:hover {
+// 	background-color: white;
+// }
+
+#nav_bar a {
+	text-decoration: none;
+}
+
+.header {
+	font-size: 16px;
+	margin-top: 1%;
+}
+
+.header_left {
+	position: relative;
+	left: 3%;
+}
+
+#genre {
+	margin-left: 2%;
+}
+
+.header_right {
+	position: relative;
+	left: 65%;
+}
+
+#logo {
+	font-size: 32px;
+	margin-left: 1%;
+}
+
+#signup {
+	margin-right: 3%;
+}
+
+#login {
+	margin-right: 3%;
+}
+
+#main_banner {
+	background-image: url(asset-path('rock2.jpg'));
+	background-position: center bottom;
+	height: 600px;
+	width: 100%;
+	border: 1px solid black;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#main_banner p {
+	position: relative;
+	text-align: center;
+}
+
+#banner_logo {
+	font-size: 88px;
+	color: white;
+	margin-bottom: 3%;
+}
+
+.tagline {
+	font-size: 32px;
+	color: white;
+	margin: 1% 0;
+}
+
+.gigstarter {
+	font-family: 'Nunito', sans-serif;
+}

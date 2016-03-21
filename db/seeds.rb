@@ -6,12 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-require_relative "../models/artist.rb"
-require_relative "../models/bid.rb"
-require_relative "../models/event.rb"
-require_relative "../models/genre.rb"
-require_relative "../models/location.rb"
-require_relative "../models/user.rb"
+require_relative "../app/models/artist.rb"
+require_relative "../app/models/bid.rb"
+require_relative "../app/models/event.rb"
+require_relative "../app/models/genre.rb"
+require_relative "../app/models/location.rb"
+require_relative "../app/models/user.rb"
 
 Artist.destroy_all
 Bid.destroy_all
@@ -120,16 +120,14 @@ end
   	description: "Situated along Empress Place, Victoria Theatre & Victoria Concert Hall reopened in July 2014, after a four-year renovation to restore the building's original 1905 structure and to create new commercial and civic spaces. With a new lease of life, Victoria Theatre & Victoria Concert Hall is now equipped to support Singapore's growing arts industry. Its venues and spaces are managed by The Esplanade Co Ltd.",
   	address: "9 Empress Place, Singapore 179556", 
     city: "Singapore", 
-    country: "Singapore",
-    capacity:
+    country: "Singapore"
   },
   {
   	venue_name: "SOTA Concert Hall",
   	description: "Designed with a box-in-box construction and crafted using minimal applied interior finishes, the Concert Hall offers exceptional acoustics for classical recitals and choral works.The enclosing upper walls of the Concert Hall are formed out of rhythmic rows of precisely shaped mustard coloured precast concrete pillows, complemented by the warm solid white oak of the splayed inner lower walls that are detailed with finesse to achieve fine acoustics.The auditorium is equipped with comprehensive audio-visual infrastructure and also hosts a dedicated recording room.",
   	address: "School Of The Arts, 1 Zubir Said Drive, Singapore 227968", 
     city: "Singapore", 
-    country: "Singapore",
-    capacity:
+    country: "Singapore"
   },
   {
   	venue_name: "Esplanade Concert Hall",
