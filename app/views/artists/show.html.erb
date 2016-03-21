@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @artist.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @artist.description %>
+</p>
+
+<p>
+  <strong>Followers:</strong>
+  <%= @artist.followers %>
+</p>
+
+<p>
+  <strong>Country of origin:</strong>
+  <%= @artist.country_of_origin %>
+</p>
+
+<p>
+  <strong>Tier 1:</strong>
+  <%= @artist.tier_1 %>
+</p>
+
+<p>
+  <strong>Tier 2:</strong>
+  <%= @artist.tier_2 %>
+</p>
+
+<p>
+  <strong>Tier 3:</strong>
+  <%= @artist.tier_3 %>
+</p>
+
+<%= link_to 'Edit', edit_artist_path(@artist) %> |
+<%= link_to 'Back', artists_path %>

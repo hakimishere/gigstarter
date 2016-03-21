@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  venue_name: MyString
+  city: MyString
+  country: MyString
+  capacity: 1
+
+two:
+  venue_name: MyString
+  city: MyString
+  country: MyString
+  capacity: 1

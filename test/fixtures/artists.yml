@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  followers: 1
+  country_of_origin: MyString
+  tier_1: 1
+  tier_2: 1
+  tier_3: 1
+
+two:
+  name: MyString
+  description: MyText
+  followers: 1
+  country_of_origin: MyString
+  tier_1: 1
+  tier_2: 1
+  tier_3: 1
