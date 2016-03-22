@@ -1,3 +1,69 @@
 // Place all the styles related to the Artists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.artist_outer {
+	background-color: black;
+}
+
+.artist_inner {
+	// background-image: url(asset-path('maroon5.jpg'));
+	// background-position: center center;
+	// background-color: grey;
+	height: 525px;
+	width: 49%;
+	border: 1px solid black;
+	margin: 0 auto;
+	margin-top: 0px;
+	margin-bottom: 2%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.artist_name {
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+
+.artist_bottom_box {
+	font-size: 26px;
+	width: 95%;
+	margin-left: 3%;
+	margin-bottom: 2%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.raised {
+	margin-left: 10%;
+}
+
+.follow {
+	margin-left: 10%;
+	width: 10%;
+	border: 1px solid grey;
+	background-color: #87CEFA;
+	word-spacing: 5px;
+	color: white;
+}
+
+.bring {
+	margin-left: 10%;
+	width: 20%;
+	border: 2px solid grey;
+	background-color: white;
+}
+
+.fa {
+	margin-right: 5%;
+}
+
+h1 {
+	text-align: center;
+}

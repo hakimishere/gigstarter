@@ -5,6 +5,7 @@ class CreateArtists < ActiveRecord::Migration
       t.text :description
       t.string :picture
       t.integer :followers, default: 0
+      t.integer :amount_raised, default: 0
       t.string :country_of_origin
       t.integer :tier_1
       t.integer :tier_2

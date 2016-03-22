@@ -1,0 +1,17 @@
+
+<h1 id="genre_h1">Genres</h1>
+
+<div class="container">
+
+	<div class="row">
+
+	<% @genres.each do |genre| %>
+		<div class="col-md-3 genre_box">
+			<a class="genre_name" href="/genres/<%= genre.id %>"><%= genre.name %></a>
+		</div>
+
+	<% end %>
+
+	</div>
+
+</div>

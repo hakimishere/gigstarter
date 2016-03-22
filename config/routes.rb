@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :locations
   resources :events
   resources :artists
@@ -7,6 +8,13 @@ Rails.application.routes.draw do
   resources :users
 
   root 'home#index'
+  
+  get "/sign_up" => redirect("/users/sign_up")
+  get "/sign_in" => redirect("/users/sign_in")
+
+  get "/sign_up" => redirect("/users/sign_up")
+  get "/sign_out" => redirect("/users/sign_out")
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

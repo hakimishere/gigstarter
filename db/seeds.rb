@@ -67,40 +67,40 @@ end
 
 [
   {
-    genre: "Alternative/Indie"
+    name: "Alternative/Indie"
   },
   {
-    genre: "Blues"
+    name: "Blues"
   },
   {
-    genre: "Classical"
+    name: "Classical"
   },
   {
-    genre: "Country"
+    name: "Country"
   },
   {
-    genre: "EDM/Dance"
+    name: "EDM/Dance"
   },
   {
-    genre: "Hip Hop"
+    name: "Hip Hop"
   },
   {
-    genre: "Jazz"
+    name: "Jazz"
   },
   {
-    genre: "Party"
+    name: "Party"
   },
   {
-    genre: "Pop"
+    name: "Pop"
   },
   {
-    genre: "Punk"
+    name: "Punk"
   },
   {
-    genre: "RnB"
+    name: "RnB"
   },
   {
-    genre: "Rock"
+    name: "Rock"
   }
 ].each do |genre|
   Genre.create!(genre)
