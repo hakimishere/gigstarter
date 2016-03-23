@@ -28,13 +28,17 @@ class ArtistsController < ApplicationController
       if user_signed_in?
           @followers = @artist.users.where(id: current_user.id)
           if @followers.count > 0
-                @artist.followers -= 1
-                @artist.users.destroy(current_user)
-                @artist.save
+              @artist.followers -= 1
+              @artist.users.destroy(current_user)
+              @artist.save
+              redirect_to artist_path
+              return
           else
               @artist.users << current_user
               @artist.followers += 1
               @artist.save
+              redirect_to artist_path
+              return
           end
       else
           redirect_to sign_in_path
