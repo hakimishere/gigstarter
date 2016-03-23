@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+<div class="new_bid_main">
   <div class="field">
     <%= f.label :artist_id %><br>
     <%= f.collection_select(:artist_id, @artists, :id, :name) %>
@@ -30,4 +31,9 @@
     <%= f.submit %>
   </div>
 
+  <%= link_to 'Back', artists_path, :id => "bid_new_back" %>
+</div>
+
 <% end %>
+
+

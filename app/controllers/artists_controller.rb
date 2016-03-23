@@ -15,7 +15,13 @@ class ArtistsController < ApplicationController
 
   # When bring button is clicked
   def bring
-      redirect_to new_bid_path
+      if user_signed_in?
+          redirect_to new_bid_path
+          return
+      else
+          redirect_to sign_in_path
+          return
+      end
   end
 
   # When follow button is clicked
@@ -33,8 +39,10 @@ class ArtistsController < ApplicationController
           end
       else
           redirect_to sign_in_path
+          return
       end
-      redirect_to artist_path #:anchor => "artist-#{@artist.id}"
+      redirect_to artists_path #:anchor => "artist-#{@artist.id}"
+      return
   end
 
   # GET /artists/new

@@ -16,6 +16,7 @@ class BidsController < ApplicationController
   def new
     @bid = Bid.new
     @artists = Artist.all
+    puts params[:id]
   end
 
   # GET /bids/1/edit

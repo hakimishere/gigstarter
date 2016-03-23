@@ -70,6 +70,19 @@ h2 {
 	text-align: center;
 }
 
-.links {
-	margin-left: 45%;
+.signin_field, .signup_field {
+	text-align: center;
+}
+
+.devise_links {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#signin_links {
+	text-align: center;
+}
+
+#signin_bottom_links {
+	text-align: center;
 }
