@@ -13,11 +13,15 @@ class ArtistsController < ApplicationController
 
   end
 
+  # When bring button is clicked
+  def bring
+      redirect_to new_bid_path
+  end
+
   # When follow button is clicked
   def follow
       if user_signed_in?
           @followers = @artist.users.where(id: current_user.id)
-          puts @followers
           if @followers.count > 0
                 @artist.followers -= 1
                 @artist.users.destroy(current_user)
@@ -26,11 +30,11 @@ class ArtistsController < ApplicationController
               @artist.users << current_user
               @artist.followers += 1
               @artist.save
-          # redirect_to artists_path :anchor => "artist-#{@artist.id}"
           end
-      # redirect_to artists_path :anchor => "artist-#{@artist.id}"
+      else
+          redirect_to sign_in_path
       end
-      redirect_to artist_path :anchor => "artist-#{@artist.id}"
+      redirect_to artist_path #:anchor => "artist-#{@artist.id}"
   end
 
   # GET /artists/new

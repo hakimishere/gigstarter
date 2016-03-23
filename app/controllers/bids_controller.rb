@@ -15,6 +15,7 @@ class BidsController < ApplicationController
   # GET /bids/new
   def new
     @bid = Bid.new
+    @artists = Artist.all
   end
 
   # GET /bids/1/edit

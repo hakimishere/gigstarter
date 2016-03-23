@@ -12,18 +12,22 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :artist_id %><br>
+    <%= f.collection_select(:artist_id, @artists, :id, :name) %>
+  </div>
+
+  <div class="field">
     <%= f.label :tier_chosen %><br>
     <%= f.number_field :tier_chosen %>
   </div>
+
   <div class="field">
     <%= f.label :amount %><br>
     <%= f.number_field :amount %>
   </div>
-  <div class="field">
-    <%= f.label :artist_id %><br>
-    <%= f.number_field :artist_id %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>

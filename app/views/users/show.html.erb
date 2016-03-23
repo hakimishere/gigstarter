@@ -1,34 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+<div id="user_page">
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+    <div id="user_page_header"><span id="profile">Profile<span><%= link_to 'Edit', edit_user_path(@user), :class => "user_page_buttons user_page_fields", :id => "user_page_edit" %><%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' }, :id => "user_page_delete", :class => "user_page_buttons user_page_delete"  %></div>
 
-<p>
-  <strong>Date of birth:</strong>
-  <%= @user.date_of_birth %>
-</p>
+    <img class="profile_img" src="<%= asset_path("#{@user.picture}") %>">
+    
+    <div id="user_page_main">
+        <p class="user_page_fields">
+          <strong class="user_page_labels">First name:</strong>
+          <%= @user.first_name %>
+        </p>
 
-<p>
-  <strong>Picture:</strong>
-  <%= @user.picture %>
-</p>
+        <p class="user_page_fields">
+          <strong class="user_page_labels">Last name:</strong>
+          <%= @user.last_name %>
+        </p>
 
-<p>
-  <strong>Biography:</strong>
-  <%= @user.biography %>
-</p>
+        <p class="user_page_fields">
+          <strong class="user_page_labels">Date of birth:</strong>
+          <%= @user.date_of_birth %>
+        </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @user.location %>
-</p>
+        <p class="user_page_fields">
+          <strong class="user_page_labels">Age:</strong>
+          <%= @user.age %>
+        </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+        <p class="user_page_fields">
+          <strong class="user_page_labels">Location:</strong>
+          <%= @user.location %>
+        </p>
+
+        <p class="user_page_fields user_page_bio">
+          <strong class="user_page_labels">Biography:</strong>
+          <%= @user.biography %>
+        </p>
+        <br>
+    </div>
+</div>

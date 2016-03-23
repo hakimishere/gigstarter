@@ -1,3 +1,84 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#notice {
+	margin-top: 2%;
+	margin-bottom: 2%;
+	text-align: center;
+}
+
+.users_outer {
+	background-color: black;
+}
+
+.users_inner {
+	// background-image: url(asset-path('maroon5.jpg'));
+	// background-position: center center;
+	// background-color: grey;
+	height: 525px;
+	width: 49%;
+	border: 1px solid black;
+	margin: 0 auto;
+	margin-top: 0px;
+	margin-bottom: 2%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#user_page {
+	width: 50%;
+	// background: #C0C0C0;
+	border: 1px solid #C0C0C0;
+	margin-right: 25%;
+	margin-left: 25%;
+}
+
+#user_page_header {
+	font-size: 20px;
+	width: 100%;
+	height: 20%;
+	background-color: #edefed;
+}
+
+#user_page_edit {
+	margin-left: 68%;
+}
+
+.profile_img {
+	height: 200px;
+	width: 200px;
+	margin-top: 2%;
+	margin-left: 2%;
+	margin-bottom: 2%;
+	float: left;
+}
+
+#user_page_main {
+	width: 60%;
+	margin-bottom: 2%;
+	margin-left: 25%;
+}
+
+#profile {
+	font-size: 24px;
+	margin: 2% 0 2% 1%;
+}
+
+.user_page_buttons {
+	margin-left: 3%;
+}
+
+.user_page_fields {
+	margin-left: 15%;
+	margin-top: 3%;
+}
+
+.user_page_labels {
+	color: #565a5c;
+}
+
+#edit_user_show {
+	margin-left: 48.5%;
+}
