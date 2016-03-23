@@ -52,6 +52,9 @@
 // #login {
 // 	margin-right: 3%;
 // }
+body {
+	background-color: white;
+}
 
 #main_banner {
 	background-image: url(asset-path('rock.jpg'));
@@ -61,6 +64,7 @@
 	border: 1px solid black;
 	margin: 0 auto;
 	margin-bottom: 1%;
+	background-color: white;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

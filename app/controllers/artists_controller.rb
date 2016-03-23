@@ -5,12 +5,12 @@ class ArtistsController < ApplicationController
   # GET /artists.json
   def index
     @artists = Artist.all.order('id ASC')
-    # @followers = @artist.users.where(id: current_user.id)
   end
 
   # GET /artists/1
   # GET /artists/1.json
   def show
+
   end
 
   # When follow button is clicked
@@ -30,7 +30,7 @@ class ArtistsController < ApplicationController
           end
       # redirect_to artists_path :anchor => "artist-#{@artist.id}"
       end
-      redirect_to artists_path :anchor => "artist-#{@artist.id}"
+      redirect_to artist_path :anchor => "artist-#{@artist.id}"
   end
 
   # GET /artists/new

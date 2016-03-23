@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :artists do
     member do
       get 'follow'
-      get 'bring'
     end
   end
   resources :bids

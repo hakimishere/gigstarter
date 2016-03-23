@@ -23,11 +23,8 @@
 </div>
 <div class="artists_bottom_box">
     <div class="artists_bottom followers"><%=artist.followers%> followers</div>
-    <div class="artists_bottom raised">$ <%=artist.amount_raised%> raised</div>
-    
+    <div class="artists_bottom raised">$ <%=artist.amount_raised%> raised</div> 
     <a class="follow artists_buttons btn btn-lg btn-primary" id="artist_<%= artist.name %>" href="artists/<%=artist.id%>/follow"><i class="fa fa-thumbs-o-up"></i>Follow</a>
-
-    
     <a class="bring artists_buttons btn btn-lg btn-success" href="artists/<%=artist.id%>/bring">Bring Them Over!</a>
 </div>
 <!-- 

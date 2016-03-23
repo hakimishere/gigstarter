@@ -33,6 +33,7 @@ User.destroy_all
   { 
     name: "Of Monsters And Men", 
     description: "Of Monsters And Men are an indie folk band which formed in 2010 in Reykjavík, Iceland. The band consists of Nanna BryndísHilmarsdóttir (vocals, guitar), Ragnar Þórhallsson (vocals, guitar), Brynjar Leifsson (guitar), Kristján Páll Kristjánsson (bass), Árni Guðjónsson (keyboards,accordion) and Arnar Rósenkranz Hilmarsson (drums). The band released their debut album “My Head is An Animal” in September 2011. The album’s single “Little Talks” peaked at #1 in Iceland, and became successful in the United States after extensive airplay on Philadelphia rockstation WRFF and subsequent word of mouth.", 
+    picture: "ofmonstersandmen.jpg",
     country_of_origin: "Iceland",
     tier_1: 140,
     tier_2: 120,
@@ -41,6 +42,7 @@ User.destroy_all
   { 
     name: "James Morrison", 
     description: "James Morrison is an English singer-songwriter and guitarist from Derby. In 2006, his debut single 'You Give Me Something' became a hit in Europe, Australia, Japan and Iran peaking in the top five in the UK and claiming the number 1 spot in New Zealand. His debut album, Undiscovered, debuted at the top of the UK Albums Chart. In 2007 Morrison won the Brit Award for Best British Male.", 
+    picture: "jamesmorrison.jpeg",
     country_of_origin: "United Kingdom",
     tier_1: 150,
     tier_2: 125,
@@ -49,6 +51,7 @@ User.destroy_all
   { 
     name: "Craig David", 
     description: "Craig David is an English-born singer-songwriter who hit the big time when he was just 19 years of age with the release of his debut album 'Born To Do It' in the year 2000. Mixing contemporary R&B with Soul & Pop, the album spawned 4 U.K Top 10 singles and went on to sell over 8 million copies worldwide.", 
+    picture: "craigdavid.jpg",
     country_of_origin: "United Kingdom",
     tier_1: 180,
     tier_2: 140,
@@ -57,6 +60,7 @@ User.destroy_all
   { 
     name: "Kelvin Fok", 
     description: "Armed with a guitar, his boyish good looks, and koala bear cap, Kelvin Fok burst onto the YouTube scene with his cover of McFly's All About You'. After stealing hearts in Singapore, he sought greater fortunes Down Under. Controversial at times, he was seen fighting with inanimate poles on public transportation. Since then, Kelvin has gone from strum to strum, winning back fans with belters like 'I'm Yours' and better quality video; all the better to see his pretty face. Last seen taking a hiatus at General Assembly.", 
+    picture: "kelvinfok.jpg",
     country_of_origin: "Singapore",
     tier_1: 2,
     tier_2: 1,

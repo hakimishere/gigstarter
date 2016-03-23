@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 // Artists Page Starts Here
+
 .artists_outer {
 	background-color: black;
 }
@@ -84,6 +84,8 @@
 }
 
 .artist_img {
+	height: 400px;
+	width: 600px;
 	border-radius: 10px;
 }
 
@@ -95,4 +97,29 @@
 	padding: 2%;
 }
 
+.desc_inner_box {
+	display: flex;
+}
+
+.tiers_table {
+	margin-left: 5%;
+	text-align: center;
+}
+
+.tiers_table tr td {
+	padding-left: 15px;
+}
+
+.following {
+	margin-left: 10%;
+}
+
+.desc_buttons {
+	display: flex;
+	margin-top: 5%;
+}
+
+.bring_artist {
+	margin-left: 5%;
+}
 // Individual Artists Page Ends Here
