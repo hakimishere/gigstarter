@@ -16,16 +16,19 @@
 
 <% @artists.each do |artist| %>
 
-<div class="artist_outer" id="artist-<%=artist.id%>">
-    <div class="artist_inner">
-        <a class="artist_name" href="artists/<%=artist.id%>"><%= artist.name %></a>
+<div class="artists_outer" id="artist-<%=artist.id%>">
+    <div class="artists_inner">
+        <a class="artists_name" href="artists/<%=artist.id%>"><%= artist.name %></a>
     </div>
 </div>
-<div class="artist_bottom_box">
-    <div class="artist_bottom followers"><%=artist.followers%> followers</div>
-    <div class="artist_bottom raised">$ <%=artist.amount_raised%> raised</div>
-    <button class="follow artist_button btn btn-lg btn-primary"><i class="fa fa-thumbs-o-up"></i>Follow</button>
-    <button class="bring artist_button btn btn-lg btn-success">Bring Them Over!</button>
+<div class="artists_bottom_box">
+    <div class="artists_bottom followers"><%=artist.followers%> followers</div>
+    <div class="artists_bottom raised">$ <%=artist.amount_raised%> raised</div>
+    
+    <a class="follow artists_buttons btn btn-lg btn-primary" id="artist_<%= artist.name %>" href="artists/<%=artist.id%>/follow"><i class="fa fa-thumbs-o-up"></i>Follow</a>
+
+    
+    <a class="bring artists_buttons btn btn-lg btn-success" href="artists/<%=artist.id%>/bring">Bring Them Over!</a>
 </div>
 <!-- 
   <tr>

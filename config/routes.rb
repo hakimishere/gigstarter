@@ -2,18 +2,29 @@ Rails.application.routes.draw do
   devise_for :users
   resources :locations
   resources :events
-  resources :artists
+  resources :artists do
+    member do
+      get 'follow'
+      get 'bring'
+    end
+  end
   resources :bids
   resources :genres
   resources :users
 
   root 'home#index'
   
-  get "/sign_up" => redirect("/users/sign_up")
-  get "/sign_in" => redirect("/users/sign_in")
+  devise_scope :user do
+  get "sign_up", to: "devise/registrations#new"
+  get "sign_in", to: "devise/sessions#new"
+  get "sign_out", to: "devise/sessions#destroy"
+  end
 
-  get "/sign_up" => redirect("/users/sign_up")
-  get "/sign_out" => redirect("/users/sign_out")
+  # get "/sign_up" => redirect("/users/sign_up")
+  # get "/sign_in" => redirect("/users/sign_in")
+
+  # get "/sign_up" => redirect("/users/sign_up")
+  # get "/sign_out" => redirect("/users/sign_out")
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
   #   end
   # end
 
+  # def userid
+  #     @userid = current_user.id
+  #     return @userid
+  # end
 
   before_action :configure_devise_permitted_parameters, if: :devise_controller?
 
@@ -18,6 +22,9 @@ class ApplicationController < ActionController::Base
 
   def configure_devise_permitted_parameters
     registration_params = [:username, :first_name, :last_name, :date_of_birth, :gender, :location, :email, :password, :password_confirmation]
+
+    devise_parameter_sanitizer.for(:sign_in) {
+        |u| u.permit(registration_params) }
 
     if params[:action] == 'update'
       devise_parameter_sanitizer.for(:account_update) { 

@@ -1,12 +1,28 @@
 <h1>
   <!-- <strong>Name:</strong> -->
-  <strong><%= @artist.name %></strong>
+  <strong id="artist_name"><%= @artist.name %></strong>
 </h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @artist.description %>
-</p>
+<div class="artist_main_box">
+    <img class="artist_img" width="600px" height="400px" src="<%= asset_path("#{@artist.picture}") %>">
+
+    <p class="artist_desc">
+      <strong>Description:</strong> <br>
+      <%= @artist.description %> <br> <br>
+      <strong>Country of origin:</strong> <br>
+      <%= @artist.country_of_origin %>
+    </p>
+
+    <table class="tiers_table">
+        <tr>
+            <td><strong>Tier 1:</strong></td>
+            <td><strong>Tier 2:</strong></td>
+            <td><strong>Tier 2:</strong></td>
+        </tr>
+
+    </table>
+
+</div>
 
 <p>
   <strong>Followers:</strong>
@@ -14,8 +30,7 @@
 </p>
 
 <p>
-  <strong>Country of origin:</strong>
-  <%= @artist.country_of_origin %>
+  
 </p>
 
 <p>

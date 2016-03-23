@@ -24,6 +24,7 @@ User.destroy_all
   { 
     name: "Maroon 5", 
     description: "Maroon 5 is a pop band from Los Angeles, California, and has won several awards for their debut album Songs About Jane. Released in June 2002, the album enjoyed major chart success, going gold, platinum, and triple platinum in many countries around the world. Their follow-up acoustic album 1.22.03.Acoustic, which features live, unplugged versions of Songs About Jane, has also reached platinum status. The group won the Grammy Award for Best New Artist in 2005. In the fall of 2005 they released a live record called Live - Friday The 13th which was recorded on May 13, 2005 in Santa Barbara, California and has earned them another Grammy Award for Best Pop Performance by a Duo or Group with Vocal in 2006.", 
+    picture: "maroon5.jpg",
     country_of_origin: "USA",
     tier_1: 200,
     tier_2: 170,
@@ -171,4 +172,20 @@ end
   }
 ].each do |location|
   Location.create!(location)
+end
+
+
+[ {
+  email: "hakimishere@outlook.com",
+  username: "hakimishere",
+  first_name: "Hakim",
+  last_name: "Ariffin",
+  date_of_birth: "24/04/1990",
+  gender: "Male",
+  location: "Singapore",
+  password: "password",
+  password_confirmation: "password"
+}
+].each do |user|
+  User.create!(user)
 end

@@ -1,15 +1,36 @@
 class ArtistsController < ApplicationController
-  before_action :set_artist, only: [:show, :edit, :update, :destroy]
+  before_action :set_artist, only: [:show, :edit, :update, :destroy, :follow]
 
   # GET /artists
   # GET /artists.json
   def index
-    @artists = Artist.all
+    @artists = Artist.all.order('id ASC')
+    # @followers = @artist.users.where(id: current_user.id)
   end
 
   # GET /artists/1
   # GET /artists/1.json
   def show
+  end
+
+  # When follow button is clicked
+  def follow
+      if user_signed_in?
+          @followers = @artist.users.where(id: current_user.id)
+          puts @followers
+          if @followers.count > 0
+                @artist.followers -= 1
+                @artist.users.destroy(current_user)
+                @artist.save
+          else
+              @artist.users << current_user
+              @artist.followers += 1
+              @artist.save
+          # redirect_to artists_path :anchor => "artist-#{@artist.id}"
+          end
+      # redirect_to artists_path :anchor => "artist-#{@artist.id}"
+      end
+      redirect_to artists_path :anchor => "artist-#{@artist.id}"
   end
 
   # GET /artists/new

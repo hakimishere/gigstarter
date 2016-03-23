@@ -3,12 +3,12 @@
         <a class="gigstarter" id="logo" href="/">GigStarter</a>
         <a class="header_left header" id="artist" href="/artists">Artists</a>
         <a class="header_left header" id="genre" href="/genres">Genres</a>
-        <% if user_signed_in? %>
-			<a class="header_right header" id="myaccount" href="">My Account</a>
-		    <a class="header_right header" id="logout" href="sign_out">Logout</a>
-        <% else	%>
-		    <a class="header_right header" id="signup" href="sign_up">Sign Up</a>
-		    <a class="header_right header" id="login" href="sign_in">Login</a>
-		<% end %>
+    <% if user_signed_in? %>
+        <a class="header_right header" id="myaccount" href="/users/<%= current_user.id %>">My Account</a>
+        <a class="header_right header" id="logout" href="sign_out">Logout</a>
+    <% else %>
+  		<a class="header_right header" id="signup" href="sign_up">Sign Up</a>
+		<a class="header_right header" id="login" href="sign_in">Login</a>
+	<% end %>
     </nav>
 </header>

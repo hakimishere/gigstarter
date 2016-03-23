@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160322061329) do
+ActiveRecord::Schema.define(version: 20160322152736) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,22 @@ ActiveRecord::Schema.define(version: 20160322061329) do
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
   end
+
+  create_table "artists_genres", id: false, force: :cascade do |t|
+    t.integer "artist_id", null: false
+    t.integer "genre_id",  null: false
+  end
+
+  add_index "artists_genres", ["artist_id", "genre_id"], name: "index_artists_genres_on_artist_id_and_genre_id", using: :btree
+  add_index "artists_genres", ["genre_id", "artist_id"], name: "index_artists_genres_on_genre_id_and_artist_id", using: :btree
+
+  create_table "artists_users", id: false, force: :cascade do |t|
+    t.integer "artist_id", null: false
+    t.integer "user_id",   null: false
+  end
+
+  add_index "artists_users", ["artist_id", "user_id"], name: "index_artists_users_on_artist_id_and_user_id", using: :btree
+  add_index "artists_users", ["user_id", "artist_id"], name: "index_artists_users_on_user_id_and_artist_id", using: :btree
 
   create_table "bids", force: :cascade do |t|
     t.integer  "tier_chosen"
